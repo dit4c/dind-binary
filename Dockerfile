@@ -8,7 +8,7 @@ ADD ./dmsetup /usr/local/bin/dmsetup
 ADD ./wrapdocker /usr/local/bin/wrapdocker
 
 # Dependencies & Install
-RUN DOCKER_VERSION=latest && \
+RUN DOCKER_VERSION=1.6.2 && \
   apk add --update iptables curl ca-certificates lxc e2fsprogs && \
   curl -L https://get.docker.com/builds/Linux/x86_64/docker-$DOCKER_VERSION \
     > /usr/local/bin/docker && \
